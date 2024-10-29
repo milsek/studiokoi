@@ -14,7 +14,6 @@ const renderProject = () => {
         <p id="project-description">${project.description}</p>
       </div>
       <div id="project-gallery" class="project-gallery py-8 sm:py-16 md:py-20 px-6 sm:px-12 md:px-16 space-y-6 sm:space-y-8 md:space-y-12 lg:space-y-14"></div>
-      <a href="/" class="back-link">Back to Gallery</a>
     `;
   
     const galleryContainer = document.getElementById('project-gallery');

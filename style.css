@@ -34,26 +34,23 @@ html, body {
 	animation: transitionIn 0.3s linear;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hidden-scrollbar::-webkit-scrollbar {
-  display: none;
-  overflow: hidden;
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(193, 194, 196, 0.5);
+}
 
-  &::-webkit-scrollbar {
-    width: 1px;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
 
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: transparent;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #777; 
 }
