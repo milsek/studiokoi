@@ -21,6 +21,7 @@ const renderProject = () => {
       const img = document.createElement('img');
       img.src = project.src + (i+1) + '.jpg';
       img.alt = `${project.label} Image`;
+      img.classList.add('mx-auto')
 
       if (project.grid && project.grid.includes(i+1)) {
         let grid = document.getElementById('gallery-grid');
@@ -36,6 +37,20 @@ const renderProject = () => {
       } else {
         galleryContainer.appendChild(img);
       }
+    });
+    
+    const worksContainer = document.getElementById('works');
+    worksContainer.innerHTML = '';
+  
+    works.forEach(work => {
+      const workItem = document.createElement('div');
+      workItem.innerHTML = `
+        <a href="/works/${work.url}">
+          <img src="${work.src + 'thumbnail.jpg'}" alt="${work.label}" class="w-full h-auto object-cover" />
+          <div class="text-sm sm:text-lg font-medium mt-4 sm:mt-6 md:mt-8">${work.label}</div>
+        </a>
+      `;
+      worksContainer.appendChild(workItem);
     });
 
     document.title = `Studio Koi × ${project.label}`;
