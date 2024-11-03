@@ -43,7 +43,9 @@ const loadWorks = () => {
     workItem.innerHTML = `
       <a href="/works/${work.url}">
         <img src="${work.src + 'thumbnail.jpg'}" alt="${work.label}" class="w-full h-auto object-cover" />
-        <div class="text-sm sm:text-lg font-medium mt-4 sm:mt-6 md:mt-8">${work.label}</div>
+      </a>
+      <a href="/works/${work.url}">
+        <div class="text-sm sm:text-base font-medium mt-3">${work.label}</div>
       </a>
     `;
     worksContainer.appendChild(workItem);
