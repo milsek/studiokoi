@@ -9,7 +9,7 @@ const renderProject = () => {
     const projectContainer =  document.getElementById('project-container');
 
     projectContainer.innerHTML = `
-      <div id="project-cover" class="bg-cover bg-center bg-black w-full h-full min-h-screen overflow-hidden" style="background-image: url(${project.src + 'cover.jpg'})"></div>
+      <div id="project-contain" class="bg-cover bg-center bg-black w-full h-72 sm:h-full sm:min-h-screen overflow-hidden" style="background-image: url(${project.src + 'cover.jpg'})"></div>
       <div class="leading-5 py-8 md:py-12 px-4 sm:px-6 text-lg sm:text-xl w-[85%] sm:w-full lg:w-2/3">
         <p id="project-description">${project.description}</p>
       </div>
